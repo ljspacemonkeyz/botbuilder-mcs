@@ -1,11 +1,11 @@
 {
   "name": "botbuilder-mcs",
   "version": "1.0.2",
-  "description": "A sample bot that demonstrates some APIs of Microsoft's Cognitive Services.",
+  "description": "A sample bot that demonstrates some APIs of Microsoft's Cognitive Services and LUIS.",
   "main": "lib/app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sebsylvester/botbuilder-mcs.git"
+    "url": "https://github.com/ljspacemonkeyz/botbuilder-mcs.git"
   },
   "scripts": {
     "build": "tsc",
@@ -26,10 +26,10 @@
     "chatbots",
     "bots"
   ],
-  "author": "Sebastian Sylvester",
+  "author": "ljspacemonkeyz",
   "license": "MIT",
-  "bugs": "https://github.com/sebsylvester/botbuilder-mcs/issues",
-  "homepage": "https://github.com/sebsylvester/botbuilder-mcs",
+  "bugs": "https://github.com/ljspacemonkeyz/botbuilder-mcs/issues",
+  "homepage": "https://github.com/ljspacemonkeyz/botbuilder-mcs",
   "dependencies": {
     "botbuilder": "^3.13.1",
     "lodash.sortby": "^4.7.0",

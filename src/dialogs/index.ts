@@ -3,3 +3,5 @@ export { root } from './root';
 export { firstRun } from './firstRun';
 export { menu } from './menu';
 export { newRequest } from './newRequest';
+export { cv } from './luisRecog';
+export { emotion } from './luisRecog';

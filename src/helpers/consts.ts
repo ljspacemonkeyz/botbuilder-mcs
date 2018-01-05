@@ -21,7 +21,7 @@ export enum CognitiveServices {
 export const APIs: API[] = [
     { 
         name: 'Computer Vision',
-        url: 'https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze?details=Celebrities',
+        url: 'https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?details=Celebrities',
         key: process.env.VISION_API_KEY || config.VISION_API_KEY,
         handler: handlers.handleComputerVisionResponse,
         chunked: true

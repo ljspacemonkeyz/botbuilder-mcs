@@ -3,7 +3,8 @@ import {
     ChatConnector, 
     UniversalBot, 
     Middleware,
-    MemoryBotStorage 
+    MemoryBotStorage,
+    LuisRecognizer  
 } from 'botbuilder';
 import * as dialogs from './dialogs';
 import { setAccessToken } from './helpers/accessToken';
@@ -30,6 +31,10 @@ setAccessToken(bot);
 bot.use(Middleware.firstRun({ version: 1.0, dialogId: '*:/firstRun' }));
 bot.use(Middleware.sendTyping());
 
+//use LUIS as bot recognizer
+const luisRec = new LuisRecognizer(config.LuisUrl);
+bot.recognizer(luisRec);
+
 //=========================================================
 // Bots Dialogs
 //=========================================================
@@ -40,6 +45,11 @@ bot.dialog('/newRequest', dialogs.newRequest);
 bot.dialog('/menu', dialogs.menu)
     .triggerAction({ matches: /^API/i })
     .cancelAction('cancelMenuAction', 'OK, nevermind', { matches: /(cancel|nevermind)/i })
+bot.dialog('cv', dialogs.cv)
+    .triggerAction({ matches: 'cv' });
+bot.dialog('emotion', dialogs.emotion)
+    .triggerAction({ matches: 'emotion' });
+
 
 //=========================================================
 // Server Setup

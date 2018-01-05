@@ -4,7 +4,7 @@ import {
     IntentDialog,
     Message, 
     Session,
-    ThumbnailCard 
+    ThumbnailCard
 } from 'botbuilder';
 
 import {
@@ -25,8 +25,8 @@ const greet = (session: Session) => {
 // Used when the user says "help"
 export const help = (session: Session) => {
     session.send('I am just a simple bot, I can only understand images and links to images.');
-    session.send('If you send me a link, make sure it starts with http:// or https://');
-    session.endDialog('Say “API” to see what APIs I can use.');
+    session.endDialog('If you send me a link, make sure it starts with http:// or https://');
+    //session.endDialog('Say “API” to see what APIs I can use.');
 };
 
 // The "/" or default dialog handler
